@@ -1,220 +1,183 @@
+
+/* ========================================
+   GLOBAL STYLES
+======================================== */
+
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #111827;
-  color: white;
-}
-
-.dashboard {
-  padding: 40px;
-}
-
-h1 {
-  margin-bottom: 10px;
-}
-
-.stats {
-  display: flex;
-  gap: 20px;
-  margin-top: 30px;
-}
-
-.stat-card {
-  padding: 25px;
-  width: 180px;
-  border-radius: 12px;
-  color: white;
-}
-
-.stat-card.red {
-  background: #DC4545;
-}
-
-.stat-card.orange {
-  background: #E99A32;
-}
-
-.stat-card.green {
-  background: #36A66B;
-}
-
-
-
-/* Profile tile */
-.tile {
-  width: 120px;
-  height: 160px;
-  border-radius: 8px;
-  padding: 10px;
-  box-sizing: border-box;
-  color: white;
-  text-align: center;
-}
-
-/* Net Worth categories */
-.tile.red {
-  background-color: #DC4545;
-}
-
-.tile.orange {
-  background-color: #E99A32;
-}
-
-.tile.green {
-  background-color: #36A66B;
+    margin: 0;
+    font-family: Helvetica, sans-serif;
+    background-color: #000;
+    color: #fff;
+    overflow: hidden;
 }
 
 a {
-  color: #8ff;
+    color: #8ff;
 }
+
+
+/* ========================================
+   ORIGINAL THREE.JS TITLE
+======================================== */
+
+#info {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    font-family: Helvetica, sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    color: rgba(127, 255, 255, 0.75);
+    z-index: 1;
+}
+
+
+/* ========================================
+   ORIGINAL THREE.JS BUTTONS
+======================================== */
 
 #menu {
-  position: absolute;
-  bottom: 20px;
-  width: 100%;
-  text-align: center;
-}
-
-.element {
-  width: 120px;
-  height: 160px;
-  box-shadow: 0px 0px 12px rgba(0, 255, 255, 0.5);
-  border: 1px solid rgba(127, 255, 255, 0.25);
-  font-family: Helvetica, sans-serif;
-  text-align: center;
-  line-height: normal;
-  cursor: default;
-}
-
-.element:hover {
-  box-shadow: 0px 0px 12px rgba(0, 255, 255, 0.75);
-  border: 1px solid rgba(127, 255, 255, 0.75);
-}
-
-.element .number {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  font-size: 12px;
-  color: rgba(127, 255, 255, 0.75);
-}
-
-.element .symbol {
-  position: absolute;
-  top: 40px;
-  left: 0px;
-  right: 0px;
-  font-size: 60px;
-  font-weight: bold;
-  color: rgba(255, 255, 255, 0.75);
-  text-shadow: 0 0 10px rgba(0, 255, 255, 0.95);
-}
-
-.element .details {
-  position: absolute;
-  bottom: 15px;
-  left: 0px;
-  right: 0px;
-  font-size: 12px;
-  color: rgba(127, 255, 255, 0.75);
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+    z-index: 1;
 }
 
 button {
-  color: rgba(127, 255, 255, 0.75);
-  background: transparent;
-  outline: 1px solid rgba(127, 255, 255, 0.75);
-  border: 0px;
-  padding: 5px 10px;
-  cursor: pointer;
+    color: rgba(127, 255, 255, 0.75);
+    background: transparent;
+    outline: 1px solid rgba(127, 255, 255, 0.75);
+    border: 0;
+    padding: 5px 10px;
+    margin: 0 3px;
+    cursor: pointer;
+    font-family: Helvetica, sans-serif;
+    transition: background-color 0.2s, color 0.2s;
 }
 
 button:hover {
-  background-color: rgba(0, 255, 255, 0.5);
+    background-color: rgba(0, 255, 255, 0.5);
 }
 
 button:active {
-  color: #000000;
-  background-color: rgba(0, 255, 255, 0.75);
-}
-
-.person-photo {
-  width: 100%;
-  height: 70px;
-  object-fit: cover;
-  margin-bottom: 5px;
-}
-
-.details {
-  white-space: pre-line;
-  font-size: 11px;
+    color: #000;
+    background-color: rgba(0, 255, 255, 0.75);
 }
 
 
+/* ========================================
+   PERSON CARD
+======================================== */
 
-/* Person card */
 .element {
     width: 120px;
     height: 160px;
-    box-sizing: border-box;
     padding: 7px;
     display: flex;
     flex-direction: column;
-    font-family: Helvetica, sans-serif;
     align-items: center;
     overflow: hidden;
-    border: 1px solid rgba(255, 255, 255, 0.35);
-    border-radius: 4px;
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+
+    font-family: Helvetica, sans-serif;
+    text-align: center;
+
+    border: 1px solid rgba(127, 255, 255, 0.25);
+    border-radius: 2px;
+
+    box-shadow: 0 0 12px rgba(0, 255, 255, 0.5);
+
+    cursor: default;
+
+    transition: box-shadow 0.2s, border 0.2s;
 }
 
-/* Country and age */
+.element:hover {
+    box-shadow: 0 0 12px rgba(0, 255, 255, 0.75);
+    border: 1px solid rgba(127, 255, 255, 0.75);
+}
+
+
+/* ========================================
+   COUNTRY AND AGE
+======================================== */
+
 .card-header {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    font-size: 9px;
-    color: white;
+
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.9);
+
     margin-bottom: 6px;
 }
 
-/* Photo */
+
+/* ========================================
+   PERSON PHOTO
+======================================== */
+
 .person-photo {
-    width: 65px;
-    height: 65px;
+    width: 80px;
+    height: 80px;
     object-fit: cover;
     border-radius: 2px;
     margin-bottom: 5px;
 }
 
-/* Name */
+
+/* ========================================
+   PERSON NAME
+======================================== */
+
 .person-name {
     width: 100%;
-    font-size: 9px;
+
+    font-size: 10px;
     font-weight: bold;
-    color: white;
-    text-align: center;
     line-height: 11px;
-    overflow: hidden;
+
+    color: rgba(255, 255, 255, 0.95);
+
+    text-align: center;
+
+    overflow: visible;
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
 }
 
-/* Interest */
+
+/* ========================================
+   PERSON INTEREST
+======================================== */
+
 .person-interest {
     width: 100%;
-    font-size: 8px;
-    color: white;
+
+    font-size: 10px;
+    color: rgba(127, 255, 255, 0.9);
+
     text-align: center;
     margin-top: 3px;
+
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
 }
+
+
+
+/* ========================================
+   GOOGLE-STYLE LOGIN PAGE
+======================================== */
 
 #login {
     position: fixed;
@@ -222,18 +185,116 @@ button:active {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+
+    width: 420px;
+    max-width: calc(100vw - 40px);
+    padding: 48px 36px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+
     text-align: center;
-    color: white;
-    background: #222;
-    padding: 30px;
-    border-radius: 10px;
+    font-family: Arial, sans-serif;
+
+    background: #ffffff;
+    color: #202124;
+
+    border: 1px solid #dadce0;
+    border-radius: 12px;
+
+    box-shadow: 0 2px 12px rgba(60, 64, 67, 0.15);
+}
+
+#login h2 {
+    margin: 0;
+    font-size: 26px;
+    font-weight: 500;
+    color: #202124;
+}
+
+#login p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #5f6368;
 }
 
 #login button {
-    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    min-height: 48px;
+    padding: 0 24px;
+
+    background: #0b57d0;
+    color: #ffffff;
+
+    border: none;
+    outline: none;
+    border-radius: 6px;
+
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+
     cursor: pointer;
+    transition: background 0.2s, box-shadow 0.2s;
+}
+
+#login button:hover {
+    background: #0842a0;
+    box-shadow: 0 2px 5px rgba(60, 64, 67, 0.3);
+}
+
+#login button:active {
+    background: #063b8e;
+}
+
+#login button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
 }
 
 #login-status {
+    min-height: 18px;
     font-size: 13px;
+    color: #188038;
+}
+
+/* ========================================
+   DARK MODE
+======================================== */
+
+@media (prefers-color-scheme: dark) {
+    #login {
+        background: #1f1f1f;
+        color: #e3e3e3;
+        border-color: #444746;
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+    }
+
+    #login h2 {
+        color: #e3e3e3;
+    }
+
+    #login p {
+        color: #c4c7c5;
+    }
+
+    #login-status {
+        color: #81c995;
+    }
+
+    #login button {
+        background: #a8c7fa;
+        color: #062e6f;
+    }
+
+    #login button:hover {
+        background: #c2d7ff;
+    }
 }

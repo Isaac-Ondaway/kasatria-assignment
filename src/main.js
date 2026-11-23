@@ -83,7 +83,7 @@ loginButton.addEventListener('click', () => {
 });
 
 async function init(accessToken) {
-  
+
   const people = await loadPeople(accessToken);
 
   camera = new THREE.PerspectiveCamera(40, window.innerWidth / window.innerHeight, 1, 10000);
@@ -106,9 +106,9 @@ async function init(accessToken) {
     const color = getNetWorthColor(person.netWorth);
 
     const colors = {
-      red: '#EF3022',
-      orange: '#DCA345',
-      green: '#3A9F4B'
+      red: 'rgba(239, 48, 34, 0.65)',
+      orange: 'rgba(220, 163, 69, 0.65)',
+      green: 'rgba(58, 159, 75, 0.65)'
     };
 
     element.style.backgroundColor = colors[color];
