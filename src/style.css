@@ -298,3 +298,31 @@ button:active {
         background: #c2d7ff;
     }
 }
+
+/* Net Worth colour legend */
+#legend {
+    position: absolute;
+    bottom: 40px;
+    right: 300px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    z-index: 2;
+
+    font-family: Helvetica, sans-serif;
+    font-size: 12px;
+    color: white;
+}
+
+#legend-gradient {
+    width: 140px;
+    height: 12px;
+    border-radius: 2px;
+
+    background: linear-gradient(
+        to right,
+        #EF3022 0%,
+        #FDCA35 50%,
+        #3A9F48 100%
+    );
+}

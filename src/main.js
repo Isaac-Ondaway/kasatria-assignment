@@ -106,11 +106,10 @@ async function init(accessToken) {
     const color = getNetWorthColor(person.netWorth);
 
     const colors = {
-      red: 'rgba(239, 48, 34, 0.65)',
-      orange: 'rgba(220, 163, 69, 0.65)',
-      green: 'rgba(58, 159, 75, 0.65)'
+      red: '#EF3022',
+      orange: '#FDCA35',
+      green: '#3A9F48'
     };
-
     element.style.backgroundColor = colors[color];
 
     // Person's photo
